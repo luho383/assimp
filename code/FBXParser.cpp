@@ -135,6 +135,7 @@ Element::Element(const Token& key_token, Parser& parser)
             const TokenType ty = n->Type();
 
 			// some exporters are missing a comma on the next line
+			// so process element when on new line
 			if (ty == TokenType_DATA && prev->Type() == TokenType_DATA && (n->Line() == prev->Line() + 1)) {
 				tokens.push_back(n);
 				continue;
