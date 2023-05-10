@@ -1349,6 +1349,8 @@ void SceneCombiner::Copy(aiMetadata **_dest, const aiMetadata *src) {
         case AI_AIVECTOR3D:
             out.mData = new aiVector3D(*static_cast<aiVector3D *>(in.mData));
             break;
+        case AI_AIMETADATA:
+            break;
         default:
             ai_assert(false);
             break;
